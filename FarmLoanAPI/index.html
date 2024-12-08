@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Farm Loan Application</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="loan-container">
+			<h1>Farm Loan Application</h1>
+
+			<form id="loan-form">
+				<label for="loan-amount">Loan Amount ($):</label>
+				<input type="number" id="loan-amount" required />
+
+				<label for="loan-duration">Loan Duration (months):</label>
+				<input type="number" id="loan-duration" required />
+
+				<label for="interest-rate">Annual Interest Rate (%):</label>
+				<input type="number" id="interest-rate" required />
+
+				<button type="submit">Apply for Loan</button>
+			</form>
+
+			<div id="loan-result">
+				<!-- Loan result will appear here -->
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
