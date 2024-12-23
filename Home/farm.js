@@ -1,3 +1,25 @@
+document.querySelector('a[href="#header"]').addEventListener('click', function (e) {
+  e.preventDefault(); // Prevent default anchor behavior
+  window.scrollTo({
+    top: 0, // Scroll to the top of the page
+    behavior: 'smooth' // Smooth scrolling effect
+  });
+});
+
+
+// Select all navigation links
+const navLinks = document.querySelectorAll('#navbar a');
+
+// Add a click event listener to each link
+navLinks.forEach(link => {
+  link.addEventListener('click', function () {
+    // Remove 'active' class from all links
+    navLinks.forEach(nav => nav.classList.remove('active'));
+    // Add 'active' class to the clicked link
+    this.classList.add('active');
+  });
+});
+
 const signInToggle = document.getElementById('signInToggle');
 const loginForm = document.getElementById('loginForm');
 const formTitle = document.getElementById('formTitle');
